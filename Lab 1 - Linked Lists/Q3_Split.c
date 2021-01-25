@@ -127,4 +127,21 @@ int split(ListNode *cur, ListNode **ptrEvenList,ListNode **ptrOddList)
         currNode = currNode->next;
         index++;
     }
+	
+    /** Another Version **/
+    /*
+    int indexOdd = 0, indexEven = 0;
+    while(currNode != NULL){
+        if((currNode->item %2) != 0){
+            //ODD
+            insertNode(ptrOddList, indexOdd, currNode->item);
+            indexOdd++;
+        }else{
+            //EVEN
+            insertNode(ptrEvenList, indexEven, currNode->item);
+            indexEven++;
+        }
+        currNode = currNode->next;
+    }
+    */
 }
